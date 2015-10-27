@@ -15,8 +15,13 @@ export class Product {
     public description:string = 'First product description';
     public imageUrl:string;
     public price:number = 99;
+    public tags:string[] = [];
 
     constructor() {
         this.imageUrl = 'http://lorempixel.com/200/100';
+    }
+
+    addTag(newTag) {
+        this.tags.push(newTag.value);
     }
 }
