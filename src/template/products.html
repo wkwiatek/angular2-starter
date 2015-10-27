@@ -4,9 +4,12 @@
             <sort [by]="'price'" [sorting]="sorting" (update-sorting)="sort($event)"></sort>
             <sort [by]="'name'" [sorting]="sorting" (update-sorting)="sort($event)"></sort>
         </div>
+        <div class="col-sm-12">
+            <filter (update-filtering)="filter($event)"></filter>
+        </div>
     </div>
 </div>
 
-<div class="col-sm-4" *ng-for="#product of products">
+<div class="col-sm-4" *ng-for="#product of filteredProducts">
     <product [item]="product"></product>
 </div>
