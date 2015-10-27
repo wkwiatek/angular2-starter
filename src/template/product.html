@@ -1,0 +1,13 @@
+<div class="card">
+    <img class="card-img-top" [src]="item.imageUrl" style="width: 100%;">
+    <div class="card-block">
+        <span class="label label-primary">{{ item.price | currency }}</span>
+        <h4 class="card-title">{{ item.name }}</h4>
+        <span *ng-for="#tag of item.tags" class="label label-success">{{ tag }}</span>
+        <p class="card-text">{{ item.description }}</p>
+        <input #new-tag (keyup.enter)="addTag(newTag)" type="text"/>
+        <div>
+            <a (click)="addTag(newTag)" href="#" class="btn btn-primary">Add tag</a>
+        </div>
+    </div>
+</div>
