@@ -1,3 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <sort [by]="'price'" [sorting]="sorting" (update-sorting)="sort($event)"></sort>
+            <sort [by]="'name'" [sorting]="sorting" (update-sorting)="sort($event)"></sort>
+        </div>
+    </div>
+</div>
+
 <div class="col-sm-4" *ng-for="#product of products">
     <product [item]="product"></product>
 </div>

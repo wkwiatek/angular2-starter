@@ -10,6 +10,4 @@ import {ProductsComponent} from './products/productsComponent';
     templateUrl: 'src/template/starting-app.html',
     directives: [ProductsComponent]
 })
-export default class StartingApp {
-    public hello:string = 'Hello, World!';
-}
+export default class StartingApp {}

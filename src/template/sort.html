@@ -1,0 +1,4 @@
+<button (click)="sort()" type="button" class="btn btn-secondary">
+    {{ by }}
+    <span *ng-if="sorting.by === by">{{ sorting.desc ? '▼' : '▲'}}</span>
+</button>
